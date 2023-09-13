@@ -1,0 +1,247 @@
+id,country_name,country_id,is_active,created_by,created_date,updated_by,updated_date
+1,Afghanistan,1,1,admin,"2023-06-14 03:33:06",NULL,NULL
+2,Albania,2,1,admin,"2023-06-14 03:33:06",NULL,NULL
+3,Algeria,3,1,admin,"2023-06-14 03:33:06",NULL,NULL
+4,"American Samoa",4,1,admin,"2023-06-14 03:33:06",NULL,NULL
+5,Andorra,5,1,admin,"2023-06-14 03:33:06",NULL,NULL
+6,Angola,6,1,admin,"2023-06-14 03:33:06",NULL,NULL
+7,Anguilla,7,1,admin,"2023-06-14 03:33:06",NULL,NULL
+8,Antarctica,8,1,admin,"2023-06-14 03:33:06",NULL,NULL
+9,"Antigua And Barbuda",9,1,admin,"2023-06-14 03:33:06",NULL,NULL
+10,Argentina,10,1,admin,"2023-06-14 03:33:06",NULL,NULL
+11,Armenia,11,1,admin,"2023-06-14 03:33:06",NULL,NULL
+12,Aruba,12,1,admin,"2023-06-14 03:33:06",NULL,NULL
+13,Australia,13,1,admin,"2023-06-14 03:33:06",NULL,NULL
+14,Austria,14,1,admin,"2023-06-14 03:33:06",NULL,NULL
+15,Azerbaijan,15,1,admin,"2023-06-14 03:33:06",NULL,NULL
+16,"Bahamas The",16,1,admin,"2023-06-14 03:33:06",NULL,NULL
+17,Bahrain,17,1,admin,"2023-06-14 03:33:06",NULL,NULL
+18,Bangladesh,18,1,admin,"2023-06-14 03:33:06",NULL,NULL
+19,Barbados,19,1,admin,"2023-06-14 03:33:06",NULL,NULL
+20,Belarus,20,1,admin,"2023-06-14 03:33:06",NULL,NULL
+21,Belgium,21,1,admin,"2023-06-14 03:33:06",NULL,NULL
+22,Belize,22,1,admin,"2023-06-14 03:33:06",NULL,NULL
+23,Benin,23,1,admin,"2023-06-14 03:33:06",NULL,NULL
+24,Bermuda,24,1,admin,"2023-06-14 03:33:06",NULL,NULL
+25,Bhutan,25,1,admin,"2023-06-14 03:33:06",NULL,NULL
+26,Bolivia,26,1,admin,"2023-06-14 03:33:06",NULL,NULL
+27,"Bosnia and Herzegovina",27,1,admin,"2023-06-14 03:33:06",NULL,NULL
+28,Botswana,28,1,admin,"2023-06-14 03:33:06",NULL,NULL
+29,"Bouvet Island",29,1,admin,"2023-06-14 03:33:06",NULL,NULL
+30,Brazil,30,1,admin,"2023-06-14 03:33:06",NULL,NULL
+31,"British Indian Ocean Territory",31,1,admin,"2023-06-14 03:33:06",NULL,NULL
+32,Brunei,32,1,admin,"2023-06-14 03:33:06",NULL,NULL
+33,Bulgaria,33,1,admin,"2023-06-14 03:33:06",NULL,NULL
+34,"Burkina Faso",34,1,admin,"2023-06-14 03:33:06",NULL,NULL
+35,Burundi,35,1,admin,"2023-06-14 03:33:06",NULL,NULL
+36,Cambodia,36,1,admin,"2023-06-14 03:33:06",NULL,NULL
+37,Cameroon,37,1,admin,"2023-06-14 03:33:06",NULL,NULL
+38,Canada,38,1,admin,"2023-06-14 03:33:06",NULL,NULL
+39,"Cape Verde",39,1,admin,"2023-06-14 03:33:06",NULL,NULL
+40,"Cayman Islands",40,1,admin,"2023-06-14 03:33:06",NULL,NULL
+41,"Central African Republic",41,1,admin,"2023-06-14 03:33:06",NULL,NULL
+42,Chad,42,1,admin,"2023-06-14 03:33:06",NULL,NULL
+43,Chile,43,1,admin,"2023-06-14 03:33:06",NULL,NULL
+44,China,44,1,admin,"2023-06-14 03:33:06",NULL,NULL
+45,"Christmas Island",45,1,admin,"2023-06-14 03:33:06",NULL,NULL
+46,"Cocos (Keeling) Islands",46,1,admin,"2023-06-14 03:33:06",NULL,NULL
+47,Colombia,47,1,admin,"2023-06-14 03:33:06",NULL,NULL
+48,Comoros,48,1,admin,"2023-06-14 03:33:06",NULL,NULL
+49,"Republic Of The Congo",49,1,admin,"2023-06-14 03:33:06",NULL,NULL
+50,"Democratic Republic Of The Congo",50,1,admin,"2023-06-14 03:33:06",NULL,NULL
+51,"Cook Islands",51,1,admin,"2023-06-14 03:33:06",NULL,NULL
+52,"Costa Rica",52,1,admin,"2023-06-14 03:33:06",NULL,NULL
+53,"Cote D'Ivoire (Ivory Coast)",53,1,admin,"2023-06-14 03:33:06",NULL,NULL
+54,"Croatia (Hrvatska)",54,1,admin,"2023-06-14 03:33:06",NULL,NULL
+55,Cuba,55,1,admin,"2023-06-14 03:33:06",NULL,NULL
+56,Cyprus,56,1,admin,"2023-06-14 03:33:06",NULL,NULL
+57,"Czech Republic",57,1,admin,"2023-06-14 03:33:06",NULL,NULL
+58,Denmark,58,1,admin,"2023-06-14 03:33:06",NULL,NULL
+59,Djibouti,59,1,admin,"2023-06-14 03:33:06",NULL,NULL
+60,Dominica,60,1,admin,"2023-06-14 03:33:06",NULL,NULL
+61,"Dominican Republic",61,1,admin,"2023-06-14 03:33:06",NULL,NULL
+62,"East Timor",62,1,admin,"2023-06-14 03:33:06",NULL,NULL
+63,Ecuador,63,1,admin,"2023-06-14 03:33:06",NULL,NULL
+64,Egypt,64,1,admin,"2023-06-14 03:33:06",NULL,NULL
+65,"El Salvador",65,1,admin,"2023-06-14 03:33:06",NULL,NULL
+66,"Equatorial Guinea",66,1,admin,"2023-06-14 03:33:06",NULL,NULL
+67,Eritrea,67,1,admin,"2023-06-14 03:33:06",NULL,NULL
+68,Estonia,68,1,admin,"2023-06-14 03:33:06",NULL,NULL
+69,Ethiopia,69,1,admin,"2023-06-14 03:33:06",NULL,NULL
+70,"External Territories of Australia",70,1,admin,"2023-06-14 03:33:06",NULL,NULL
+71,"Falkland Islands",71,1,admin,"2023-06-14 03:33:06",NULL,NULL
+72,"Faroe Islands",72,1,admin,"2023-06-14 03:33:06",NULL,NULL
+73,"Fiji Islands",73,1,admin,"2023-06-14 03:33:06",NULL,NULL
+74,Finland,74,1,admin,"2023-06-14 03:33:06",NULL,NULL
+75,France,75,1,admin,"2023-06-14 03:33:06",NULL,NULL
+76,"French Guiana",76,1,admin,"2023-06-14 03:33:06",NULL,NULL
+77,"French Polynesia",77,1,admin,"2023-06-14 03:33:06",NULL,NULL
+78,"French Southern Territories",78,1,admin,"2023-06-14 03:33:06",NULL,NULL
+79,Gabon,79,1,admin,"2023-06-14 03:33:06",NULL,NULL
+80,"Gambia The",80,1,admin,"2023-06-14 03:33:06",NULL,NULL
+81,Georgia,81,1,admin,"2023-06-14 03:33:06",NULL,NULL
+82,Germany,82,1,admin,"2023-06-14 03:33:06",NULL,NULL
+83,Ghana,83,1,admin,"2023-06-14 03:33:06",NULL,NULL
+84,Gibraltar,84,1,admin,"2023-06-14 03:33:06",NULL,NULL
+85,Greece,85,1,admin,"2023-06-14 03:33:06",NULL,NULL
+86,Greenland,86,1,admin,"2023-06-14 03:33:06",NULL,NULL
+87,Grenada,87,1,admin,"2023-06-14 03:33:06",NULL,NULL
+88,Guadeloupe,88,1,admin,"2023-06-14 03:33:06",NULL,NULL
+89,Guam,89,1,admin,"2023-06-14 03:33:06",NULL,NULL
+90,Guatemala,90,1,admin,"2023-06-14 03:33:06",NULL,NULL
+91,"Guernsey and Alderney",91,1,admin,"2023-06-14 03:33:06",NULL,NULL
+92,Guinea,92,1,admin,"2023-06-14 03:33:06",NULL,NULL
+93,Guinea-Bissau,93,1,admin,"2023-06-14 03:33:06",NULL,NULL
+94,Guyana,94,1,admin,"2023-06-14 03:33:06",NULL,NULL
+95,Haiti,95,1,admin,"2023-06-14 03:33:06",NULL,NULL
+96,"Heard and McDonald Islands",96,1,admin,"2023-06-14 03:33:06",NULL,NULL
+97,Honduras,97,1,admin,"2023-06-14 03:33:06",NULL,NULL
+98,"Hong Kong S.A.R.",98,1,admin,"2023-06-14 03:33:06",NULL,NULL
+99,Hungary,99,1,admin,"2023-06-14 03:33:06",NULL,NULL
+100,Iceland,100,1,admin,"2023-06-14 03:33:06",NULL,NULL
+101,India,101,1,admin,"2023-06-14 03:33:06",NULL,NULL
+102,Indonesia,102,1,admin,"2023-06-14 03:33:06",NULL,NULL
+103,Iran,103,1,admin,"2023-06-14 03:33:06",NULL,NULL
+104,Iraq,104,1,admin,"2023-06-14 03:33:06",NULL,NULL
+105,Ireland,105,1,admin,"2023-06-14 03:33:06",NULL,NULL
+106,Israel,106,1,admin,"2023-06-14 03:33:06",NULL,NULL
+107,Italy,107,1,admin,"2023-06-14 03:33:06",NULL,NULL
+108,Jamaica,108,1,admin,"2023-06-14 03:33:06",NULL,NULL
+109,Japan,109,1,admin,"2023-06-14 03:33:06",NULL,NULL
+110,Jersey,110,1,admin,"2023-06-14 03:33:06",NULL,NULL
+111,Jordan,111,1,admin,"2023-06-14 03:33:06",NULL,NULL
+112,Kazakhstan,112,1,admin,"2023-06-14 03:33:06",NULL,NULL
+113,Kenya,113,1,admin,"2023-06-14 03:33:06",NULL,NULL
+114,Kiribati,114,1,admin,"2023-06-14 03:33:06",NULL,NULL
+115,"Korea North",115,1,admin,"2023-06-14 03:33:06",NULL,NULL
+116,"Korea South",116,1,admin,"2023-06-14 03:33:06",NULL,NULL
+117,Kuwait,117,1,admin,"2023-06-14 03:33:06",NULL,NULL
+118,Kyrgyzstan,118,1,admin,"2023-06-14 03:33:06",NULL,NULL
+119,Laos,119,1,admin,"2023-06-14 03:33:06",NULL,NULL
+120,Latvia,120,1,admin,"2023-06-14 03:33:06",NULL,NULL
+121,Lebanon,121,1,admin,"2023-06-14 03:33:06",NULL,NULL
+122,Lesotho,122,1,admin,"2023-06-14 03:33:06",NULL,NULL
+123,Liberia,123,1,admin,"2023-06-14 03:33:06",NULL,NULL
+124,Libya,124,1,admin,"2023-06-14 03:33:06",NULL,NULL
+125,Liechtenstein,125,1,admin,"2023-06-14 03:33:06",NULL,NULL
+126,Lithuania,126,1,admin,"2023-06-14 03:33:06",NULL,NULL
+127,Luxembourg,127,1,admin,"2023-06-14 03:33:06",NULL,NULL
+128,"Macau S.A.R.",128,1,admin,"2023-06-14 03:33:06",NULL,NULL
+129,Macedonia,129,1,admin,"2023-06-14 03:33:06",NULL,NULL
+130,Madagascar,130,1,admin,"2023-06-14 03:33:06",NULL,NULL
+131,Malawi,131,1,admin,"2023-06-14 03:33:06",NULL,NULL
+132,Malaysia,132,1,admin,"2023-06-14 03:33:06",NULL,NULL
+133,Maldives,133,1,admin,"2023-06-14 03:33:06",NULL,NULL
+134,Mali,134,1,admin,"2023-06-14 03:33:06",NULL,NULL
+135,Malta,135,1,admin,"2023-06-14 03:33:06",NULL,NULL
+136,"Man (Isle of)",136,1,admin,"2023-06-14 03:33:06",NULL,NULL
+137,"Marshall Islands",137,1,admin,"2023-06-14 03:33:06",NULL,NULL
+138,Martinique,138,1,admin,"2023-06-14 03:33:06",NULL,NULL
+139,Mauritania,139,1,admin,"2023-06-14 03:33:06",NULL,NULL
+140,Mauritius,140,1,admin,"2023-06-14 03:33:06",NULL,NULL
+141,Mayotte,141,1,admin,"2023-06-14 03:33:06",NULL,NULL
+142,Mexico,142,1,admin,"2023-06-14 03:33:06",NULL,NULL
+143,Micronesia,143,1,admin,"2023-06-14 03:33:06",NULL,NULL
+144,Moldova,144,1,admin,"2023-06-14 03:33:06",NULL,NULL
+145,Monaco,145,1,admin,"2023-06-14 03:33:06",NULL,NULL
+146,Mongolia,146,1,admin,"2023-06-14 03:33:06",NULL,NULL
+147,Montserrat,147,1,admin,"2023-06-14 03:33:06",NULL,NULL
+148,Morocco,148,1,admin,"2023-06-14 03:33:06",NULL,NULL
+149,Mozambique,149,1,admin,"2023-06-14 03:33:06",NULL,NULL
+150,Myanmar,150,1,admin,"2023-06-14 03:33:06",NULL,NULL
+151,Namibia,151,1,admin,"2023-06-14 03:33:06",NULL,NULL
+152,Nauru,152,1,admin,"2023-06-14 03:33:06",NULL,NULL
+153,Nepal,153,1,admin,"2023-06-14 03:33:06",NULL,NULL
+154,"Netherlands Antilles",154,1,admin,"2023-06-14 03:33:06",NULL,NULL
+155,"Netherlands The",155,1,admin,"2023-06-14 03:33:06",NULL,NULL
+156,"New Caledonia",156,1,admin,"2023-06-14 03:33:06",NULL,NULL
+157,"New Zealand",157,1,admin,"2023-06-14 03:33:06",NULL,NULL
+158,Nicaragua,158,1,admin,"2023-06-14 03:33:06",NULL,NULL
+159,Niger,159,1,admin,"2023-06-14 03:33:06",NULL,NULL
+160,Nigeria,160,1,admin,"2023-06-14 03:33:06",NULL,NULL
+161,Niue,161,1,admin,"2023-06-14 03:33:06",NULL,NULL
+162,"Norfolk Island",162,1,admin,"2023-06-14 03:33:06",NULL,NULL
+163,"Northern Mariana Islands",163,1,admin,"2023-06-14 03:33:06",NULL,NULL
+164,Norway,164,1,admin,"2023-06-14 03:33:06",NULL,NULL
+165,Oman,165,1,admin,"2023-06-14 03:33:06",NULL,NULL
+166,Pakistan,166,1,admin,"2023-06-14 03:33:06",NULL,NULL
+167,Palau,167,1,admin,"2023-06-14 03:33:06",NULL,NULL
+168,"Palestinian Territory Occupied",168,1,admin,"2023-06-14 03:33:06",NULL,NULL
+169,Panama,169,1,admin,"2023-06-14 03:33:06",NULL,NULL
+170,"Papua new Guinea",170,1,admin,"2023-06-14 03:33:06",NULL,NULL
+171,Paraguay,171,1,admin,"2023-06-14 03:33:06",NULL,NULL
+172,Peru,172,1,admin,"2023-06-14 03:33:06",NULL,NULL
+173,Philippines,173,1,admin,"2023-06-14 03:33:06",NULL,NULL
+174,"Pitcairn Island",174,1,admin,"2023-06-14 03:33:06",NULL,NULL
+175,Poland,175,1,admin,"2023-06-14 03:33:06",NULL,NULL
+176,Portugal,176,1,admin,"2023-06-14 03:33:06",NULL,NULL
+177,"Puerto Rico",177,1,admin,"2023-06-14 03:33:06",NULL,NULL
+178,Qatar,178,1,admin,"2023-06-14 03:33:06",NULL,NULL
+179,Reunion,179,1,admin,"2023-06-14 03:33:06",NULL,NULL
+180,Romania,180,1,admin,"2023-06-14 03:33:06",NULL,NULL
+181,Russia,181,1,admin,"2023-06-14 03:33:06",NULL,NULL
+182,Rwanda,182,1,admin,"2023-06-14 03:33:06",NULL,NULL
+183,"Saint Helena",183,1,admin,"2023-06-14 03:33:06",NULL,NULL
+184,"Saint Kitts And Nevis",184,1,admin,"2023-06-14 03:33:06",NULL,NULL
+185,"Saint Lucia",185,1,admin,"2023-06-14 03:33:06",NULL,NULL
+186,"Saint Pierre and Miquelon",186,1,admin,"2023-06-14 03:33:06",NULL,NULL
+187,"Saint Vincent And The Grenadines",187,1,admin,"2023-06-14 03:33:06",NULL,NULL
+188,Samoa,188,1,admin,"2023-06-14 03:33:06",NULL,NULL
+189,"San Marino",189,1,admin,"2023-06-14 03:33:06",NULL,NULL
+190,"Sao Tome and Principe",190,1,admin,"2023-06-14 03:33:06",NULL,NULL
+191,"Saudi Arabia",191,1,admin,"2023-06-14 03:33:06",NULL,NULL
+192,Senegal,192,1,admin,"2023-06-14 03:33:06",NULL,NULL
+193,Serbia,193,1,admin,"2023-06-14 03:33:06",NULL,NULL
+194,Seychelles,194,1,admin,"2023-06-14 03:33:06",NULL,NULL
+195,"Sierra Leone",195,1,admin,"2023-06-14 03:33:06",NULL,NULL
+196,Singapore,196,1,admin,"2023-06-14 03:33:06",NULL,NULL
+197,Slovakia,197,1,admin,"2023-06-14 03:33:06",NULL,NULL
+198,Slovenia,198,1,admin,"2023-06-14 03:33:06",NULL,NULL
+199,"Smaller Territories of the UK",199,1,admin,"2023-06-14 03:33:06",NULL,NULL
+200,"Solomon Islands",200,1,admin,"2023-06-14 03:33:06",NULL,NULL
+201,Somalia,201,1,admin,"2023-06-14 03:33:06",NULL,NULL
+202,"South Africa",202,1,admin,"2023-06-14 03:33:06",NULL,NULL
+203,"South Georgia",203,1,admin,"2023-06-14 03:33:06",NULL,NULL
+204,"South Sudan",204,1,admin,"2023-06-14 03:33:06",NULL,NULL
+205,Spain,205,1,admin,"2023-06-14 03:33:06",NULL,NULL
+206,"Sri Lanka",206,1,admin,"2023-06-14 03:33:06",NULL,NULL
+207,Sudan,207,1,admin,"2023-06-14 03:33:06",NULL,NULL
+208,Suriname,208,1,admin,"2023-06-14 03:33:06",NULL,NULL
+209,"Svalbard And Jan Mayen Islands",209,1,admin,"2023-06-14 03:33:06",NULL,NULL
+210,Swaziland,210,1,admin,"2023-06-14 03:33:06",NULL,NULL
+211,Sweden,211,1,admin,"2023-06-14 03:33:06",NULL,NULL
+212,Switzerland,212,1,admin,"2023-06-14 03:33:06",NULL,NULL
+213,Syria,213,1,admin,"2023-06-14 03:33:06",NULL,NULL
+214,Taiwan,214,1,admin,"2023-06-14 03:33:06",NULL,NULL
+215,Tajikistan,215,1,admin,"2023-06-14 03:33:06",NULL,NULL
+216,Tanzania,216,1,admin,"2023-06-14 03:33:06",NULL,NULL
+217,Thailand,217,1,admin,"2023-06-14 03:33:06",NULL,NULL
+218,Togo,218,1,admin,"2023-06-14 03:33:06",NULL,NULL
+219,Tokelau,219,1,admin,"2023-06-14 03:33:06",NULL,NULL
+220,Tonga,220,1,admin,"2023-06-14 03:33:06",NULL,NULL
+221,"Trinidad And Tobago",221,1,admin,"2023-06-14 03:33:06",NULL,NULL
+222,Tunisia,222,1,admin,"2023-06-14 03:33:06",NULL,NULL
+223,Turkey,223,1,admin,"2023-06-14 03:33:06",NULL,NULL
+224,Turkmenistan,224,1,admin,"2023-06-14 03:33:06",NULL,NULL
+225,"Turks And Caicos Islands",225,1,admin,"2023-06-14 03:33:06",NULL,NULL
+226,Tuvalu,226,1,admin,"2023-06-14 03:33:06",NULL,NULL
+227,Uganda,227,1,admin,"2023-06-14 03:33:06",NULL,NULL
+228,Ukraine,228,1,admin,"2023-06-14 03:33:06",NULL,NULL
+229,"United Arab Emirates",229,1,admin,"2023-06-14 03:33:06",NULL,NULL
+230,"United Kingdom",230,1,admin,"2023-06-14 03:33:06",NULL,NULL
+231,"United States",231,1,admin,"2023-06-14 03:33:06",NULL,NULL
+232,"United States Minor Outlying Islands",232,1,admin,"2023-06-14 03:33:06",NULL,NULL
+233,Uruguay,233,1,admin,"2023-06-14 03:33:06",NULL,NULL
+234,Uzbekistan,234,1,admin,"2023-06-14 03:33:06",NULL,NULL
+235,Vanuatu,235,1,admin,"2023-06-14 03:33:06",NULL,NULL
+236,"Vatican City State (Holy See)",236,1,admin,"2023-06-14 03:33:06",NULL,NULL
+237,Venezuela,237,1,admin,"2023-06-14 03:33:06",NULL,NULL
+238,Vietnam,238,1,admin,"2023-06-14 03:33:06",NULL,NULL
+239,"Virgin Islands (British)",239,1,admin,"2023-06-14 03:33:06",NULL,NULL
+240,"Virgin Islands (US)",240,1,admin,"2023-06-14 03:33:06",NULL,NULL
+241,"Wallis And Futuna Islands",241,1,admin,"2023-06-14 03:33:06",NULL,NULL
+242,"Western Sahara",242,1,admin,"2023-06-14 03:33:06",NULL,NULL
+243,Yemen,243,1,admin,"2023-06-14 03:33:06",NULL,NULL
+244,Yugoslavia,244,1,admin,"2023-06-14 03:33:06",NULL,NULL
+245,Zambia,245,1,admin,"2023-06-14 03:33:06",NULL,NULL
+246,Zimbabwe,246,1,admin,"2023-06-14 03:33:06",NULL,NULL
