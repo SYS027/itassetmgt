@@ -10,7 +10,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       origins [
         "http://localhost:3001",
         "http://apps.itassetmgt.com/",
-        "http://apps.itassetmgt.com/api/v1",
+        # "http://apps.itassetmgt.com/api/v1",
     ]
     
       resource "*",
