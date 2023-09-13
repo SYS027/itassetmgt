@@ -7,11 +7,14 @@ ruby "3.2.2"
 gem "rails", "~> 7.0.6"
 gem 'jwt'
 # Use sqlite3 as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', group: :production
+
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'rails_12factor'
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
+
 gem 'devise'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
