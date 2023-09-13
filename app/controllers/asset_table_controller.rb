@@ -1,0 +1,2 @@
+class AssetTableController < ApplicationController
+end
