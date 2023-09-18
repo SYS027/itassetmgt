@@ -190,7 +190,7 @@ DEPENDENCIES
   debug
   devise
   jwt
-  pg
+  pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.6)

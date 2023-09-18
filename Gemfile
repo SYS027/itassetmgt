@@ -6,8 +6,8 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
 gem 'jwt'
-# Use sqlite3 as the database for Active Record
-gem 'pg', group: :production
+# Use pg as the database for Active Record
+gem "pg", "~> 1.1"
 
 gem 'rack-cors', :require => 'rack/cors'
 
