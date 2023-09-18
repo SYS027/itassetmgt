@@ -1,6 +1,7 @@
 class CreateAssetTables < ActiveRecord::Migration[7.0]
   def change
     create_table :asset_tables do |t|
+      t.integer :companyId
       t.integer :asset_id
       t.integer :product_catagory_id
       t.integer :product_type_id
