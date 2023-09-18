@@ -7,7 +7,7 @@ ruby "3.2.2"
 gem "rails", "~> 7.0.6"
 gem 'jwt'
 # Use sqlite3 as the database for Active Record
-gem 'mysql2', group: :production
+gem 'pg', group: :production
 
 gem 'rack-cors', :require => 'rack/cors'
 

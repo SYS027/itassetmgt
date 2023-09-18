@@ -11,7 +11,10 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
-  create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -21,7 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "active_storage_blobs", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -33,13 +36,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "active_storage_variant_records", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "active_storage_variant_records", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "admins", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "name", default: "", null: false
@@ -57,7 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "asset_specifications", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "asset_specifications", force: :cascade do |t|
     t.bigint "company_id", null: false
     t.string "name"
     t.string "value"
@@ -67,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["company_id"], name: "index_asset_specifications_on_company_id"
   end
 
-  create_table "asset_tables", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "asset_tables", force: :cascade do |t|
     t.integer "companyId"
     t.integer "asset_id"
     t.integer "product_catagory_id"
@@ -90,7 +93,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "assets", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "assets", force: :cascade do |t|
     t.bigint "company_id", null: false
     t.bigint "product_category_id", null: false
     t.bigint "product_type_id", null: false
@@ -118,7 +121,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["vendor_id"], name: "index_assets_on_vendor_id"
   end
 
-  create_table "assign_assets", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "assign_assets", force: :cascade do |t|
     t.bigint "company_id", null: false
     t.bigint "product_category_id", null: false
     t.bigint "product_type_id", null: false
@@ -143,7 +146,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["vendor_id"], name: "index_assign_assets_on_vendor_id"
   end
 
-  create_table "cities", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "cities", force: :cascade do |t|
     t.string "city_name"
     t.bigint "country_id", null: false
     t.bigint "state_id", null: false
@@ -154,7 +157,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["state_id"], name: "index_cities_on_state_id"
   end
 
-  create_table "companies", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "companies", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.integer "contact_number"
@@ -170,21 +173,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.binary "logo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "admin_id", null: false
-    t.index ["admin_id"], name: "index_companies_on_admin_id"
     t.index ["city_id"], name: "index_companies_on_city_id"
     t.index ["country_id"], name: "index_companies_on_country_id"
     t.index ["state_id"], name: "index_companies_on_state_id"
   end
 
-  create_table "countries", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "countries", force: :cascade do |t|
     t.string "country_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "country_id"
   end
 
-  create_table "departments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "departments", force: :cascade do |t|
     t.string "department_name"
     t.string "contact_person_name"
     t.string "contact_person_email"
@@ -196,7 +197,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["company_id"], name: "index_departments_on_company_id"
   end
 
-  create_table "employees", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "employees", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "employee_id"
@@ -211,7 +212,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["location_id"], name: "index_employees_on_location_id"
   end
 
-  create_table "locations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.bigint "company_id", null: false
     t.string "office_name"
     t.string "poc_name"
@@ -230,7 +231,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["state_id"], name: "index_locations_on_state_id"
   end
 
-  create_table "no_of_employees", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "no_of_employees", force: :cascade do |t|
     t.integer "emp_id"
     t.integer "no_of_employee"
     t.boolean "is_active"
@@ -238,7 +239,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "notifications", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "notifications", force: :cascade do |t|
     t.bigint "company_id", null: false
     t.integer "notify_id"
     t.string "software_warranty_expiry"
@@ -249,7 +250,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["company_id"], name: "index_notifications_on_company_id"
   end
 
-  create_table "product_categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "product_categories", force: :cascade do |t|
     t.integer "product_category_id"
     t.string "category_name"
     t.boolean "is_active"
@@ -257,7 +258,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "product_types", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "product_types", force: :cascade do |t|
     t.integer "product_type_id"
     t.string "product_type"
     t.boolean "is_active"
@@ -265,7 +266,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "products", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
     t.bigint "company_id", null: false
     t.integer "product_id"
     t.string "product_name"
@@ -280,7 +281,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["product_type_id"], name: "index_products_on_product_type_id"
   end
 
-  create_table "purchase_types", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "purchase_types", force: :cascade do |t|
     t.integer "purchase_type_id"
     t.string "purchase_type"
     t.boolean "is_active"
@@ -288,7 +289,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "states", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "states", force: :cascade do |t|
     t.string "state_name"
     t.bigint "country_id", null: false
     t.datetime "created_at", null: false
@@ -297,7 +298,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["country_id"], name: "index_states_on_country_id"
   end
 
-  create_table "vendors", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "vendors", force: :cascade do |t|
     t.bigint "company_id", null: false
     t.string "vendor_name"
     t.string "email"
