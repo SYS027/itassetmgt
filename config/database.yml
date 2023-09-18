@@ -19,7 +19,7 @@ default: &default
   encoding: unicode
   database: your_database_name
   pool: 5
-  username: postgre
+  username: postgres
   password: Pk@747058899
   host: localhost
   port: 5432
@@ -35,5 +35,5 @@ test:
 production:
   <<: *default
   database: itassetmgt
-  username: postgre
+  username: postgres
   password: <%= ENV["ITASSETMGT_DATABASE_PASSWORD"] %>
