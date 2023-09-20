@@ -1,5 +1,5 @@
 class AssetTable < ApplicationRecord
-    has one: companyId
+    # has one: companyId
     has one: product_catagory_id
     has one: product_type_id
     has one: product_id
