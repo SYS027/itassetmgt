@@ -8,7 +8,7 @@ class Api::V1::CompaniesController < ApplicationController
     @company = Company.new(company_params)
     
     # Set the admin_id explicitly
-    @company.admin_id = 1
+    # @company.admin_id = 1
 
     if @company.save
       render json: @company, status: :created
