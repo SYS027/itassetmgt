@@ -26,6 +26,7 @@ Rails.application.routes.draw do
       resources :purchase_types
       resources :assign_assets
       resources :totalcost_assets
+      post 'companies' , to: 'companies#create'
       get 'productcategories',to: 'productcategories#index'
       get 'producttype',to: 'producttype#index'
       post 'product/create', to: 'product#create'
