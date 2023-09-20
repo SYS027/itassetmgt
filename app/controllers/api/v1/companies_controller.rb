@@ -5,7 +5,7 @@ class Api::V1::CompaniesController < ApplicationController
 
   def create
     @company = Company.new(company_params)
-    @company.admin_id = current_admin_id # Set the admin_id to the current admin's ID
+    @company.admin_id = current_admin_id 
 
     if @company.save
       render json: @company, status: :created
@@ -21,19 +21,6 @@ class Api::V1::CompaniesController < ApplicationController
   end
 
   def current_admin_id
-    # Assuming you store the admin's ID in the authentication token
-    # Replace 'YOUR_AUTH_TOKEN_KEY' with the actual key used in your token
-    token = request.headers['Authorization']
-    if token.present?
-      decoded_token = JWT.decode(token, 'YOUR_SECRET_KEY', true, algorithm: 'HS256')
-      admin_id = decoded_token[0]['admin_id']
-      return admin_id
-    else
-      # Handle the case where there is no token or it's invalid
-      # You can return an error, raise an exception, or handle it as needed
-      # For simplicity, I'll return nil here.
-      return nil
-    end
   end
   
 end
