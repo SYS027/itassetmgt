@@ -4,7 +4,6 @@ class Api::V1::CompaniesController < ApplicationController
   end
 
   def create
-    binding.break
     @company = Company.new(company_params)
 
     if @company.save
