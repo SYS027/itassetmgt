@@ -19,13 +19,14 @@ class Api::V1::AssetController < ApplicationController
   def create
     asset = Asset.new(asset_params)
     asset.company_id = 1
-    asset.asset_specification_id = 1
+    asset.asset_specification_id = nil 
     if asset.save
       render json: asset, status: :created
     else
       render json: { errors: asset.errors }, status: :unprocessable_entity
     end
   end
+  
 
   def show
     asset = Asset.find(params[:id])
