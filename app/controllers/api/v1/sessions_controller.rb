@@ -23,14 +23,14 @@ class Api::V1::SessionsController < ApplicationController
   end
   
   private
-  def authenticate_with_email_and_password(email, password)
-    admin = Admin.find_by(email: email)
-    if admin&.valid_password?(password)
-      sign_in(admin)
-      render json: { message: 'Login successful', admin_id: admin.id, auth_token: admin.auth_token }, status: :ok
-    else
-      render json: { message: 'Invalid credentials' }, status: :unauthorized
-    end
+  def destroy
+    # Clear the authentication token from the user's session
+    session.delete(:auth_token)
+
+    # You should also clear the token from the user's record in the database if you stored it there
+
+    # Return a response indicating successful logout
+    render json: { message: 'Logout successful' }
   end
 end
 
