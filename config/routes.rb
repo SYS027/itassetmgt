@@ -7,7 +7,7 @@ Rails.application.routes.draw do
         password_resets: 'api/v1/password_resets'
       }
       resources :registrations, only: [:index, :create]
-      resources :sessions, only: [:create]
+      resources :sessions, only: [:create, :destroy]
       resources :companies
       resources :departments
       resources :locations
