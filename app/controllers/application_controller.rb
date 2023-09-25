@@ -19,5 +19,5 @@ private
   def set_current_admin
     @current_admin = current_admin
   end
-end
+
 end
