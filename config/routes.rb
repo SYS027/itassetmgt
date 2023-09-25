@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       resources :locations
       resources :profiles
       resources :asset
-      resources :products
+      # resources :products
       resources :countries
       resources :states
       resources :cities
