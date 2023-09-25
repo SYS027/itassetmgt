@@ -1,28 +1,25 @@
-class Api::V1::SessionsController < ApplicationController
-  before_action :authenticate_admin, only: [:destroy]
-
+class SessionsController < ApplicationController
   def create
-    auth_token = params[:admin][:auth_token]
-    email = params[:admin][:email]
-    password = params[:admin][:password]
-    if auth_token.present?
-      admin = Admin.find_by(auth_token: auth_token)
-      if admin
-        sign_in(admin)
-        render json: { message: 'Login successful', admin_id: admin.id, auth_token: admin.auth_token }, status: :ok
-      else
-        authenticate_with_email_and_password(email, password)
-      end
+    user = User.find_by(email: params[:email])
+
+    if user && user.authenticate(params[:password])
+      # Generate an authentication token
+      auth_token = SecureRandom.hex
+
+      # Store the token in the user's session
+      session[:auth_token] = auth_token
+
+      # You may want to save the token to the user's record in the database
+      user.update(auth_token: auth_token)
+
+      # Return a response indicating successful login
+      render json: { message: 'Login successful', auth_token: auth_token }
     else
-      authenticate_with_email_and_password(email, password)
+      # Return an error response for unsuccessful login
+      render json: { message: 'Invalid credentials' }, status: :unauthorized
     end
   end
-  def destroy
-    sign_out(current_admin) if current_admin
-    render json: { message: 'Logout successful' }, status: :ok
-  end
-  
-  private
+
   def destroy
     # Clear the authentication token from the user's session
     session.delete(:auth_token)
@@ -33,4 +30,3 @@ class Api::V1::SessionsController < ApplicationController
     render json: { message: 'Logout successful' }
   end
 end
-
