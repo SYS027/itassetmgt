@@ -11,14 +11,14 @@ default: &default
 
 development:
   <<: *default
-  database: itassetmgt
+  database: itassetmgt1
 
 test:
   <<: *default
-  database: itassetmgt
+  database: itassetmgt1
 
 production:
   <<: *default
-  database: itassetmgt
+  database: itassetmgt1
   username: postgres
   password: <%= ENV["ITASSETMGT_DATABASE_PASSWORD"] %>
