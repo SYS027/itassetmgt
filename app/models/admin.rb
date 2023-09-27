@@ -10,6 +10,6 @@ class Admin < ApplicationRecord
   #         self.password = password
   #         save!
   #       end
-  has_secure_password
+
   
 end
