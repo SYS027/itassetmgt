@@ -5,6 +5,7 @@ default: &default
   username: awezbrhrahtdxx
   password: b1eb40ddc75d09172b09e07c114dce4b865471142586c33ea423544f740f6305
   host: ec2-44-206-204-65.compute-1.amazonaws.com
+  port: 5432
 
 development:
   <<: *default
