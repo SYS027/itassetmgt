@@ -3,20 +3,21 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: postgres
-  password: Pk@7470588990
-  host: localhost
+  username: cbppmxdjkppoxx
+  password: 8d86179b9ac683d1609878f8ff02e4d443f066d4ae902fd3d4202d11e129c8b9
+  host: ec2-54-208-11-146.compute-1.amazonaws.com
 
 development:
   <<: *default
-  database: itassetmgt
+  database: db8flvktgcev08
 
 test:
   <<: *default
-  database: itassetmgt
+  database: db8flvktgcev08
 
 production:
   <<: *default
-  database: itassetmgt
-  username: postgres
-  password: <%= ENV["ITASSETMGT_DATABASE_PASSWORD"] %>
+  database: db8flvktgcev08
+  username: cbppmxdjkppoxx
+  password: 8d86179b9ac683d1609878f8ff02e4d443f066d4ae902fd3d4202d11e129c8b9
+
