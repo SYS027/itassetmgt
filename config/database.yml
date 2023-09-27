@@ -1,8 +1,6 @@
-
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: dcalqvapf4vgdi
   pool: 5
   username: postgres
   password: Pk@7470588990
@@ -10,14 +8,12 @@ default: &default
 
 development:
   <<: *default
-  database: dcalqvapf4vgdi
+  database: itassetmgt
 
 test:
   <<: *default
-  database: dcalqvapf4vgdi
+  database: itassetmgt
 
 production:
   <<: *default
-  database: dcalqvapf4vgdi
-  username: postgres
-  password: <%= ENV["ITASSETMGT_DATABASE_PASSWORD"] %>
+  database: itassetmgt
