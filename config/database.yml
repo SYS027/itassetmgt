@@ -7,18 +7,17 @@ default: &default
   username: postgres
   password: Pk@7470588990
   host: localhost
-  port: 5432
 
 development:
   <<: *default
-  database: itassetmgt1
+  database: itassetmgt
 
 test:
   <<: *default
-  database: itassetmgt1
+  database: itassetmgt
 
 production:
   <<: *default
-  database: itassetmgt1
+  database: itassetmgt
   username: postgres
   password: <%= ENV["ITASSETMGT_DATABASE_PASSWORD"] %>
