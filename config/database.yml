@@ -2,18 +2,18 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: postgres
-  password: Pk@7470588990
-  host: localhost
+  username: awezbrhrahtdxx
+  password: b1eb40ddc75d09172b09e07c114dce4b865471142586c33ea423544f740f6305
+  host: ec2-44-206-204-65.compute-1.amazonaws.com
 
 development:
   <<: *default
-  database: itassetmgt
+  database: dcalqvapf4vgdi
 
 test:
   <<: *default
-  database: itassetmgt
+  database: dcalqvapf4vgdi
 
 production:
   <<: *default
-  database: itassetmgt
+  database: dcalqvapf4vgdi
