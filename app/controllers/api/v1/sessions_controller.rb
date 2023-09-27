@@ -16,7 +16,7 @@ class Api::V1::SessionsController < ApplicationController
     end
   end
   def destroy
-    sign_out(current_admin)
+    sign_out(current_admin) 
     render json: { message: 'Logout successful' }, status: :ok
   end
   
