@@ -1,7 +1,7 @@
 class CreateAssets < ActiveRecord::Migration[7.0]
   def change
     create_table :assets do |t|
-      t.references :companyID, null: false, foreign_key: true
+      t.references :company, null: false, foreign_key: true
       t.references :product_category, null: false, foreign_key: true
       t.references :product_type, null: false, foreign_key: true
       t.references :product, null: false, foreign_key: true
@@ -10,7 +10,7 @@ class CreateAssets < ActiveRecord::Migration[7.0]
       t.integer :price
       t.string :description
       t.references :location, null: false, foreign_key: true
-      t.date :purchase_date
+      t.date :purchase_id
       t.date :warranty_expiry_date
       t.references :purchase_type, null: false, foreign_key: true
       t.references :asset_specification, null: false, foreign_key: true
