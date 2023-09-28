@@ -24,6 +24,7 @@ require 'csv'
 def import_csv_to_table(file_path, table_name, column_names)
   CSV.foreach(file_path, headers: true) do |row|
     values = row.to_hash.slice(*column_names.split(','))
+    puts "Values to be created: #{values}"
     table_name.classify.constantize.create!(values)
   end
 end
