@@ -1,13 +1,10 @@
 class CreateStates < ActiveRecord::Migration[7.0]
   def change
-    enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')
-
-    create_table :states, id: false do |t|
+    create_table :states do |t|
       t.string :state_name
-      t.references :country, null: false, foreign_key: { to_table: :countries, type: :uuid }
+      t.references :country, null: false, foreign_key: true
 
       t.timestamps
     end
-    add_primary_key :states, :id, type: :uuid, default: -> { "gen_random_uuid()" }
   end
 end
