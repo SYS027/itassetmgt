@@ -14,10 +14,10 @@ ProductType.create(id:1,product_type: "Office Accessories")
 ProductType.create(id:1,product_type: "Server")
 ProductType.create(id:1,product_type: "Storage")
 
-purchase_types=PurchaseType.create(purchase_type_id:1,purchase_type:"Owned",is_active:true)
-purchase_types=PurchaseType.create(purchase_type_id:1,purchase_type:"Rented",is_active:true)
-purchase_types=PurchaseType.create(purchase_type_id:1,purchase_type:"Leased",is_active:true)
-purchase_types=PurchaseType.create(purchase_type_id:1,purchase_type:"Subscription",is_active:true)
+purchase_types=PurchaseType.create(id:1,purchase_type:"Owned",is_active:true)
+purchase_types=PurchaseType.create(id:1,purchase_type:"Rented",is_active:true)
+purchase_types=PurchaseType.create(id:1,purchase_type:"Leased",is_active:true)
+purchase_types=PurchaseType.create(id:1,purchase_type:"Subscription",is_active:true)
 
 require 'csv'
 
