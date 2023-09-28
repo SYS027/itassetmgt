@@ -1,4 +1,4 @@
-class AddReferencesToEmployees < ActiveRecord::Migration[7.0]
+class Addtochangecolumn < ActiveRecord::Migration[7.0]
   def change
     # First, remove the existing columns
     remove_column :employees, :location_id
