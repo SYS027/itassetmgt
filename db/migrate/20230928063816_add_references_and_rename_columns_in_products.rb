@@ -1,7 +1,7 @@
 class AddReferencesAndRenameColumnsInProducts < ActiveRecord::Migration[7.0]
   def up
     # Change the datatype of product_category_id to uuid
-    change_column :products, :product_category_id, :uuid, using: 'product_category_id::uuid'
+    # change_column :products, :product_category_id, :uuid, using: 'product_category_id::uuid'
 
     # Add the new reference with the correct datatype
     add_reference :products, :product_category, foreign_key: { to_table: :product_categories, type: :uuid }
