@@ -1,5 +1,5 @@
-class ChangeStatusInEmployeess < ActiveRecord::Migration[7.0]
+class AddStatusToEmployees < ActiveRecord::Migration[7.0]
   def change
-    change_column_default :employees, :status, true
+    add_column :employees, :status, :boolean, default: true
   end
 end
