@@ -3,7 +3,7 @@ class CreateAssignAssets < ActiveRecord::Migration[7.0]
     enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')
 
     create_table :assign_assets, id: :uuid do |t|
-      t.references :asset_table, null: false, foreign_key: true, type: :uuid
+      t.references :asset_table, null: false, foreign_key: { to_table: :asset_tables, type: :uuid }
       t.references :company, null: false, foreign_key: true, type: :uuid
       t.references :product_category, null: false, foreign_key: true, type: :uuid
       t.references :product_type, null: false, foreign_key: true, type: :uuid
