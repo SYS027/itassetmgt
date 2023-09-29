@@ -30,7 +30,7 @@ def import_csv_to_table(file_path, table_name, column_names)
 end
 
 # base_path = Rails.root.join('db', 'country-state-city')
-country_file = base_path.join('countries.csv')
+# country_file = base_path.join('countries.csv')
 state_file = base_path.join('states.csv')
 # city_file = base_path.join('city.csv')
 
