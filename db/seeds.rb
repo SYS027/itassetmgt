@@ -23,19 +23,16 @@ require 'csv'
 
 def import_csv_to_table(file_path, table_name, column_names)
   CSV.foreach(file_path, headers: true) do |row|
-    values = row.to_h.slice(*column_names.split(','))
-    puts "Values to be created: #{values}"
-    # You should use 'find_or_create_by' to avoid creating duplicate records
-    table_name.constantize.find_or_create_by(values)
+    values = row.to_hash.slice(*column_names.split(','))
+    table_name.classify.constantize.create!(values)
   end
 end
 
-# Assuming you are in a Ruby on Rails context, you can directly use Rails.root
 base_path = Rails.root.join('db', 'country-state-city')
 country_file = base_path.join('countries.csv')
 state_file = base_path.join('states.csv')
-city_file = base_path.join('city.csv')  # Corrected the filename to 'cities.csv'
+city_file = base_path.join('city.csv')
 
-import_csv_to_table(country_file, 'Country', 'id,country_name,country_id')
-import_csv_to_table(state_file, 'State', 'id,state_name,country_id,state_id')
-import_csv_to_table(city_file, 'City', 'id,name,country_id,city_id,state_id')
+import_csv_to_table(country_file, 'Country', 'id,country_name,country_id,')
+import_csv_to_table(state_file, 'State', 'id,state_name,state_id,country_id,')
+import_csv_to_table(city_file, 'City', 'id,city_name,city_id,country_id,state_id,')
