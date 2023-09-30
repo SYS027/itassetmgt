@@ -31,9 +31,9 @@ end
 
 base_path = Rails.root.join('db', 'country-state-city')
 country_file = base_path.join('countries.csv')
-# state_file = base_path.join('states.csv')
+state_file = base_path.join('states.csv')
 city_file = base_path.join('city.csv')
 
 import_csv_to_table(country_file, 'Country', 'id,country_name,country_id,')
-# import_csv_to_table(state_file, 'State', 'id,state_name,state_id,`country_id`,')
-import_csv_to_table(city_file, 'City', 'id,name,city_id,country_id,state_id,')
+import_csv_to_table(state_file, 'State', 'id,state_name,state_id,country_id,')
+import_csv_to_table(city_file, 'City', 'id,city_name,city_id,country_id,state_id,')
