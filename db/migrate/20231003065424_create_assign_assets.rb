@@ -11,7 +11,7 @@ class CreateAssignAssets < ActiveRecord::Migration[7.0]
       t.references :vendor, null: false, foreign_key: true
       t.string :address
       t.references :department, null: false, foreign_key: true, type: :uuid
-      t.references :employee, null: false, foreign_key: true
+      t.references :employee, null: false, foreign_key: true,type: :uuid
       t.string :description
       t.string :assign_component
       t.boolean :is_active
