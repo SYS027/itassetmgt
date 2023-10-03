@@ -10,6 +10,6 @@ class RemoveAssetTableAndAddAssetToAssignAssets < ActiveRecord::Migration[7.0]
     add_column :assign_assets, :asset_id, :uuid
 
     # Add a foreign key constraint to the 'assets' table
-    add_foreign_key :assign_assets, :assets, column: :asset_id, on_delete: :cascade
+    add_foreign_key :assign_assets, :assets, column: :asset_id
   end
 end
