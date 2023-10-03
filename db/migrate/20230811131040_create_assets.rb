@@ -13,8 +13,8 @@ class CreateAssets < ActiveRecord::Migration[7.0]
       t.date :purchase_id
       t.date :warranty_expiry_date
       t.references :purchase_type, null: false, foreign_key: true, type: :uuid
-      t.references :asset_specification, null: false, foreign_key: true
-      t.boolean :is_active, null: false, default: true, type: :uuid
+      t.references :asset_specification, null: false, foreign_key: true, type: :uuid
+      t.boolean :is_active, null: false, default: true
 
       t.timestamps
     end
