@@ -5,7 +5,7 @@ class CreateAssignAssets < ActiveRecord::Migration[7.0]
     create_table :assign_assets do |t|
       t.references :asset_table, null: false, foreign_key: { to_table: :asset_tables }
       t.references :company, null: false, foreign_key: true
-      t.references :product_category, null: false, foreign_key: true
+      t.references :product_category_id, null: false, foreign_key: true
       t.references :product_type, null: false, foreign_key: true
       t.references :product, null: false, foreign_key: true
       t.references :vendor, null: false, foreign_key: true
