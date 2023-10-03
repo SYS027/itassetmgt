@@ -10,7 +10,7 @@ class Addtochangecolumn < ActiveRecord::Migration[7.0]
     end
 
     # Add the references with the correct data type
-    add_reference :employees, :location, foreign_key: true, type: :uuid
+    add_reference :employees, :location, foreign_key: true
     add_reference :employees, :department, foreign_key: true, type: :uuid
   end
 end
