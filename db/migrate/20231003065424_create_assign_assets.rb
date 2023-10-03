@@ -12,7 +12,7 @@ class CreateAssignAssets < ActiveRecord::Migration[7.0]
       t.string :address
       t.references :department, null: false, foreign_key: { to_table: :departments, type: :uuid }
       t.references :employee, null: false, foreign_key: { to_table: :employees, type: :uuid }
-      t.string :description
+      t.string :description  # Change 'Discription' to 'description'
       t.string :assign_component
       t.boolean :is_active
 
