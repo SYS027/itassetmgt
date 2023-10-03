@@ -3,21 +3,21 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: cbppmxdjkppoxx
-  password: 8d86179b9ac683d1609878f8ff02e4d443f066d4ae902fd3d4202d11e129c8b9
-  host: ec2-54-208-11-146.compute-1.amazonaws.com
+  username: adbihuihshulfr
+  password: de90b16d2ddfe8806e469328f28a03029183c056af2d724f3394515c0f3321aa
+  host: ec2-54-167-29-148.compute-1.amazonaws.com
 
 development:
   <<: *default
-  database: db8flvktgcev08
+  database: ddeod5b5mkindn
 
 test:
   <<: *default
-  database: db8flvktgcev08
+  database: ddeod5b5mkindn
 
 production:
   <<: *default
-  database: db8flvktgcev08
-  username: cbppmxdjkppoxx
-  password: 8d86179b9ac683d1609878f8ff02e4d443f066d4ae902fd3d4202d11e129c8b9
+  database: ddeod5b5mkindn
+  username: adbihuihshulfr
+  password: de90b16d2ddfe8806e469328f28a03029183c056af2d724f3394515c0f3321aa
 
