@@ -1,7 +1,5 @@
 class CreateAssets < ActiveRecord::Migration[7.0]
   def change
-    enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')
-
     create_table :assets do |t|
       t.references :company, null: false, foreign_key: true
       t.references :product_category, null: false, foreign_key: true
