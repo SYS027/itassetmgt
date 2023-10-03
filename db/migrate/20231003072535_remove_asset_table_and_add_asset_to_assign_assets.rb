@@ -7,7 +7,7 @@ class RemoveAssetTableAndAddAssetToAssignAssets < ActiveRecord::Migration[7.0]
     end
 
     # Add a new 'asset_id' column with the UUID data type
-    add_column :assign_assets, :asset_id, :uuid
+    add_column :assign_assets, :asset_id, type: :uuid
 
     # Add a foreign key constraint to the 'assets' table
     add_foreign_key :assign_assets, :assets, column: :asset_id
