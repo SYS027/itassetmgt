@@ -19,7 +19,7 @@ class Api::V1::AssetController < ApplicationController
   def create
     asset = Asset.new(asset_params)
     asset.company_id = Company.last.id
-    asset.asset_specification_id = 1
+    asset.asset_specification_id = default_specification_id 
     if asset.save
       render json: asset, status: :created
     else
@@ -51,6 +51,10 @@ class Api::V1::AssetController < ApplicationController
   private
   def asset_params
     params.require(:asset).permit(:product_category_id,:product_type_id,:product_id,:vendor_id,:asset_name,:price,:description,:location_id,:purchase_id, :warranty_expiry_date,:purchase_type_id,:is_active, :serial_number)
+  end
+
+  def default_specification_id
+    1
   end
 end
 
