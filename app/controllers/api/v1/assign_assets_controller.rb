@@ -52,7 +52,7 @@ class Api::V1::AssignAssetsController < ApplicationController
 
   private
   def assign_asset_params
-    params.require(:assign_asset).permit( :product_category_id, :product_type_id, :product_id, :vendor_id, :address, :asset_id,:department_id,:employee_id,:Discription, :Assign_Component, :is_active)
+    params.require(:assign_asset).permit( :product_category_id, :product_type_id, :product_id, :vendor_id, :address, :asset_id,:department_id,:employee_id,:Description, :Assign_Component, :is_active)
   end
 end
 
