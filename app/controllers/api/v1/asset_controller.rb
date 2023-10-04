@@ -19,7 +19,7 @@ class Api::V1::AssetController < ApplicationController
   def create
     asset = Asset.new(asset_params)
     asset.company_id = Company.last.id
-    asset.asset_specification_id = nil 
+    asset.asset_specification_id = 1
     if asset.save
       render json: asset, status: :created
     else
