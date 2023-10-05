@@ -1,29 +1,23 @@
 
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   pool: 5
-#   username: adbihuihshulfr
-#   password: de90b16d2ddfe8806e469328f28a03029183c056af2d724f3394515c0f3321aa
-#   host: ec2-54-167-29-148.compute-1.amazonaws.com
-
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: postgres
-  password: sqlpass
-  database: itassetmgt
-  host: 103.228.83.115
-  port: 5432
+  username: adbihuihshulfr
+  password: de90b16d2ddfe8806e469328f28a03029183c056af2d724f3394515c0f3321aa
+  host: ec2-54-167-29-148.compute-1.amazonaws.com
 
-# test:
-#   <<: *default
-#   database: ddeod5b5mkindn
+development:
+  <<: *default
+  database: ddeod5b5mkindn
 
-# production:
-#   <<: *default
-#   database: ddeod5b5mkindn
-#   username: adbihuihshulfr
-#   password: de90b16d2ddfe8806e469328f28a03029183c056af2d724f3394515c0f3321aa
+test:
+  <<: *default
+  database: ddeod5b5mkindn
+
+production:
+  <<: *default
+  database: ddeod5b5mkindn
+  username: adbihuihshulfr
+  password: de90b16d2ddfe8806e469328f28a03029183c056af2d724f3394515c0f3321aa
 
