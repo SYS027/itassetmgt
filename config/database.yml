@@ -1,7 +1,6 @@
-
 default: &default
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
   pool: 5
 
 development:
@@ -11,19 +10,9 @@ development:
   password: sqlpass
   host: 103.228.83.115
 
-
-test:
-  <<: *default
-   database: itassetmgt
-  username: postgres
-  password: sqlpass
-  host: 103.228.83.115
-
-
 production:
   <<: *default
   database: itassetmgt
   username: postgres
   password: sqlpass
   host: 103.228.83.115
-
