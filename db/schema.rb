@@ -10,21 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_03_072535) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "citext"
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
-  create_table "active_storage_attachments", force: :cascade do |t|
+  create_table "active_storage_attachments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.bigint "record_id", null: false
-    t.bigint "blob_id", null: false
+    t.uuid "record_id", null: false
+    t.uuid "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", force: :cascade do |t|
+  create_table "active_storage_blobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -36,18 +38,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
+  create_table "active_storage_variant_records", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
   create_table "admins", force: :cascade do |t|
-    t.string "email", default: "", null: false
+    t.citext "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "name", default: "", null: false
-    t.integer "phone_number", default: 0, null: false
-    t.integer "country_code", default: 91, null: false
+    t.string "phone_number", default: "0", null: false
+    t.string "country_code", default: "+91", null: false
     t.string "password", default: "", null: false
     t.string "confirm_password", default: "", null: false
     t.string "reset_password_token"
@@ -60,7 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "asset_specifications", force: :cascade do |t|
+  create_table "asset_specifications", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.bigint "company_id", null: false
     t.string "name"
     t.string "value"
@@ -95,8 +97,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
 
   create_table "assets", force: :cascade do |t|
     t.bigint "company_id", null: false
-    t.bigint "product_category_id", null: false
-    t.bigint "product_type_id", null: false
+    t.uuid "product_category_id", null: false
+    t.uuid "product_type_id", null: false
     t.bigint "product_id", null: false
     t.string "asset_name"
     t.integer "price"
@@ -104,8 +106,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.bigint "location_id", null: false
     t.date "purchase_id"
     t.date "warranty_expiry_date"
-    t.bigint "purchase_type_id", null: false
-    t.bigint "asset_specification_id", null: false
+    t.uuid "purchase_type_id", null: false
+    t.uuid "asset_specification_id", null: false
     t.boolean "is_active", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -121,17 +123,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["vendor_id"], name: "index_assets_on_vendor_id"
   end
 
-  create_table "assign_assets", force: :cascade do |t|
+  create_table "assign_assets", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.bigint "company_id", null: false
-    t.bigint "product_category_id", null: false
-    t.bigint "product_type_id", null: false
+    t.uuid "product_category_id", null: false
+    t.uuid "product_type_id", null: false
     t.bigint "product_id", null: false
     t.bigint "vendor_id", null: false
     t.string "address"
-    t.bigint "department_id", null: false
-    t.bigint "employee_id", null: false
-    t.string "Discription"
-    t.string "Assign_Component"
+    t.uuid "department_id", null: false
+    t.uuid "employee_id", null: false
+    t.string "description"
+    t.string "assign_component"
     t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -149,7 +151,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
   create_table "cities", force: :cascade do |t|
     t.string "city_name"
     t.bigint "country_id", null: false
-    t.bigint "state_id", null: false
+    t.bigint "state_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "city_id"
@@ -185,7 +187,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.integer "country_id"
   end
 
-  create_table "departments", force: :cascade do |t|
+  create_table "departments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "department_name"
     t.string "contact_person_name"
     t.string "contact_person_email"
@@ -197,17 +199,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["company_id"], name: "index_departments_on_company_id"
   end
 
-  create_table "employees", force: :cascade do |t|
+  create_table "employees", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "employee_id"
     t.string "phone"
+    t.string "location"
     t.string "reporting_manager"
+    t.string "department"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "status", default: true
     t.bigint "location_id"
-    t.bigint "department_id"
+    t.uuid "department_id"
     t.index ["department_id"], name: "index_employees_on_department_id"
     t.index ["location_id"], name: "index_employees_on_location_id"
   end
@@ -231,7 +235,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["state_id"], name: "index_locations_on_state_id"
   end
 
-  create_table "no_of_employees", force: :cascade do |t|
+  create_table "no_of_employees", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.integer "emp_id"
     t.integer "no_of_employee"
     t.boolean "is_active"
@@ -239,7 +243,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "notifications", force: :cascade do |t|
+  create_table "notifications", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.bigint "company_id", null: false
     t.integer "notify_id"
     t.string "software_warranty_expiry"
@@ -250,16 +254,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.index ["company_id"], name: "index_notifications_on_company_id"
   end
 
-  create_table "product_categories", force: :cascade do |t|
-    t.integer "product_category_id"
+  create_table "product_categories", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "category_name"
     t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "product_types", force: :cascade do |t|
-    t.integer "product_type_id"
+  create_table "product_types", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "product_type"
     t.boolean "is_active"
     t.datetime "created_at", null: false
@@ -274,15 +276,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
     t.boolean "is_active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "product_category_id"
-    t.bigint "product_type_id"
+    t.uuid "product_category_id"
+    t.uuid "product_type_id"
     t.index ["company_id"], name: "index_products_on_company_id"
     t.index ["product_category_id"], name: "index_products_on_product_category_id"
     t.index ["product_type_id"], name: "index_products_on_product_type_id"
   end
 
-  create_table "purchase_types", force: :cascade do |t|
-    t.integer "purchase_type_id"
+  create_table "purchase_types", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "purchase_type"
     t.boolean "is_active"
     t.datetime "created_at", null: false
@@ -291,11 +292,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_064221) do
 
   create_table "states", force: :cascade do |t|
     t.string "state_name"
-    t.bigint "country_id", null: false
+    t.integer "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "state_id"
-    t.index ["country_id"], name: "index_states_on_country_id"
   end
 
   create_table "vendors", force: :cascade do |t|
