@@ -5,15 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: itassetmgt
-  username: postgres
-  password: sqlpass
-  host: 103.228.83.115
-
-
-production:
-  <<: *default
   database: ddeod5b5mkindn
   username: adbihuihshulfr
   password: de90b16d2ddfe8806e469328f28a03029183c056af2d724f3394515c0f3321aa
   host: ec2-54-167-29-148.compute-1.amazonaws.com
+
+  production:
+  <<: *default
+  database: itassetmgt
+  username: postgres
+  password: sqlpass
+  host: 103.228.83.115
