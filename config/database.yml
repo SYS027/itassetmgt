@@ -2,17 +2,18 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
+  url: <%= ENV['CUSTOM_DATABASE_URL'] %>
 
 development:
   <<: *default
-  database: itassetmanager
+  database: itassetmgt
   username: postgres
   password: sqlpass
   host: 103.228.83.115
 
-  production:
+production:
   <<: *default
-  database: itassetmanager
+  database: itassetmgt
   username: postgres
   password: sqlpass
   host: 103.228.83.115
