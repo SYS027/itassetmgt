@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: itassetmgt
+  database: itassetmanager
   username: postgres
   password: sqlpass
   host: 103.228.83.115
 
   production:
   <<: *default
-  database: itassetmgt
+  database: itassetmanager
   username: postgres
   password: sqlpass
   host: 103.228.83.115
